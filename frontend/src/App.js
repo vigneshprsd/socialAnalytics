@@ -14,14 +14,14 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main className='py-3'>
-        <Container>
+      <main style={{paddingTop:'89px'}}>
+        <div className="page">
           <Route path='/' component={HomeScreen} exact />
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
-          <PrivateRoute path='/dashboard' component={DashboardScreen} />
-        </Container>
+          <PrivateRoute path='/infoboard' component={DashboardScreen} />
+        </div>
       </main>
       <Footer />
     </Router>

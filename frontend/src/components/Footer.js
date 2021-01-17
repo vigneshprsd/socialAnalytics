@@ -5,7 +5,7 @@ const Footer = () => {
   return <footer>
     <Container>
       <Row>
-        <Col className="text-center py-3">
+        <Col className="text-center py-4">
     Copyright &copy; EZ-LYTICS
         </Col>
       </Row>

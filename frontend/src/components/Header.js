@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import {Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import { logout } from '../actions/userActions'
@@ -17,16 +17,15 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
-        <Container>
-          <LinkContainer to='/home'>
+      <Navbar fixed='top' bg='dark' variant='dark' expand='lg' collapseOnSelect>
+        <>
             <Navbar.Brand>EZ-LYTICS</Navbar.Brand>
-          </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             {userInfo && <Nav className='mr-auto'>
-              <Nav.Link href='/'>Infoboards</Nav.Link>
-              <Nav.Link href='/'>Settings</Nav.Link>
+            <LinkContainer to='/infoboard'>
+                  <Nav.Link>Infoboards</Nav.Link>
+                </LinkContainer>
             </Nav>}
             <Nav className='ml-auto'>
               {userInfo ? (
@@ -45,7 +44,7 @@ const Header = () => {
               )}
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        </>
       </Navbar>
     </header>
   )
