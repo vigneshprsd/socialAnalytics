@@ -16,7 +16,7 @@ const App = () => {
       <Header />
       <main style={{paddingTop:'89px'}}>
         <div className="page">
-          <Route path='/' component={HomeScreen} exact />
+          <PrivateRoute path='/' component={HomeScreen} exact />
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
